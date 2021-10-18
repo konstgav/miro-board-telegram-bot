@@ -7,7 +7,7 @@ Extremely simply golang telegram bot which notifies about any changes on a board
 1. Get source code
 
     ```(bash)
-    git clone <https://github.com/konstgav/miro-board-telegram-bot/>
+    git clone https://github.com/konstgav/miro-board-telegram-bot/
     cd miro-board-telegram-bot
     ```
 
@@ -33,7 +33,7 @@ Extremely simply golang telegram bot which notifies about any changes on a board
 5. Link your telegram bot with local web service
 
     ```(bash)
-    curl --request POST --url <https://api.telegram.org/bot-token/setWebhook> --header 'content-type: application/json' --data '{"url": "https-ngrok-public-name"}
+    curl --request POST --url https://api.telegram.org/bot-token/setWebhook --header 'content-type: application/json' --data '{"url": "https-ngrok-public-name"}
     ```
 
 6. It should works. Try to send `/help` message to bot.
