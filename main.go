@@ -65,7 +65,7 @@ func getWidgets(id string, token string) []byte {
 }
 
 const (
-	timeToSleep = time.Duration(20 * time.Second)
+	timeToSleep = time.Duration(10 * time.Minute)
 )
 
 func sendNotification(boardId string, chatID int64) error {
@@ -118,7 +118,7 @@ func main() {
 		log.Print("No .env file found")
 	}
 	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe("localhost:8000", nil))
+	log.Fatal(http.ListenAndServe("0.0.0.0:7000", nil))
 }
 
 func handler(response http.ResponseWriter, req *http.Request) {
